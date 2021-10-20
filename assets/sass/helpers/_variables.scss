@@ -1,0 +1,33 @@
+// COLOR VARIABLES - Start
+// ==========================================================================
+// Color Palettes
+
+// UI Specific color palette 
+$black 											: 	#000000;
+$white 											: 	#ffffff; // default color
+$red 											:	#e2061c;
+$gray-light										: 	#c9c8c8;
+$gray											: 	#838282;
+$gray-dark										: 	#333333;
+$blue											: 	#007bff;
+$orange                                         :   #FF8C00;
+$green                                          :   #008000;
+
+$color1 										: 	#fcb61a; // primary color
+$color2 										: 	#000000; // secondary color
+$color3											: 	#0AC717;
+$color4											: 	#ec1c24;
+$color5											: 	#0891e6;
+$color6                                         :   #FFA0A0;
+// #UI Specific color palette 
+
+$default-color									: 	$white;
+$primary-color									:   $color1;
+$secondary-color								: 	$color2;
+$flat-green                                     :   $color3;
+$flat-red                                       :   $color4;
+$body-link-color                                :   $color5;
+
+$text-color-dark								:   lighten($black, 15%);
+$text-color-light                               :   lighten($black, 20%);
+$border-color                                   :   lighten($black, 86.5%);

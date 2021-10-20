@@ -1,0 +1,13 @@
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+.form-control { 
+    border: 1px solid $border-color; 
+    height: 40px;
+    //@include box-shadow-input;
+    font-weight: 500;
+    @include border-radius(5px);
+    &:focus { border-color: $border-color; @include box-shadow-input; }
+}

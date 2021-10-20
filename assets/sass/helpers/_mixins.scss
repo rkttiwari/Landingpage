@@ -1,0 +1,41 @@
+@mixin center {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+}
+@mixin border-radius($property) {
+    -webkit-border-radius: $property;
+    -moz-border-radius: $property;
+    border-radius: $property;
+}
+// Transition 
+@mixin transition($property, $time, $method) {
+	-webkit-transition: $property $time $method;
+	-moz-transition: $property $time $method;
+	-ms-transition: $property $time $method;
+	-o-transition: $property $time $method;
+	transition: $property $time $method;
+}
+
+// Box shadow
+@mixin box-shadow($shadow: 0 0 4px 3px rgba(0,0,0,0.04) ) {
+	-webkit-box-shadow	: $shadow;
+	-moz-box-shadow		: $shadow;
+	box-shadow			: $shadow;
+}
+@mixin box-shadow-hover($shadow: 0 0 8px 6px rgba(0,0,0,0.04) ) {
+	-webkit-box-shadow	: $shadow;
+	-moz-box-shadow		: $shadow;
+	box-shadow			: $shadow;
+}
+
+@mixin box-shadow-btn($shadow: 0 0 4px 2px rgba(0,0,0,0.1) ) {
+	-webkit-box-shadow	: $shadow;
+	-moz-box-shadow		: $shadow;
+	box-shadow			: $shadow;
+}
+@mixin box-shadow-input($shadow: 0 0 4px 1px rgba(0,0,0,0.05) ) {
+	-webkit-box-shadow	: $shadow;
+	-moz-box-shadow		: $shadow;
+	box-shadow			: $shadow;
+}
