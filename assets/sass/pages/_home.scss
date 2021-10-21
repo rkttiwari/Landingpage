@@ -58,10 +58,6 @@ section {
     }
   }
 
-  &.alumniBenefits {
-    background: $white;
-  }
-
   .programme {
     &__title {
       h2 {
@@ -80,6 +76,63 @@ section {
     }
   }
 }
+
+.alumni {
+  background: $white;
+  &__benefits {
+    position: relative;
+    height: 80px;
+    margin: 30px 0;
+    padding: 0 100px 0 35px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: $white;
+    background: $primary-color;
+    @include center;
+    @include border-radius(50px);
+    &:nth-child(2) {
+      background: darken($primary-color, $amount: 10%);
+      .alumni__benefits__icon {
+        span { border-color: darken($primary-color, $amount: 10%); }
+      }
+    }
+    &:nth-child(3) {
+      background: darken($primary-color, $amount: 20%);
+      .alumni__benefits__icon {
+        span { border-color: darken($primary-color, $amount: 20%); }
+      }
+    }
+    &:nth-child(4) {
+      background: darken($primary-color, $amount: 30%);
+      .alumni__benefits__icon {
+        span { border-color: darken($primary-color, $amount: 30%); }
+      }
+    }
+    &__icon {
+      position: absolute;
+      top: 5px;
+      right: 0;
+      outline: 10px solid $white;
+      @include border-radius(50%);
+      &:nth-child(2) span {
+         border-color: darken($primary-color, $amount: 10%);
+      }
+      span {
+        width: 70px;
+        height: 70px;
+        background: lighten($black, $amount: 90%);
+        border: 10px solid $primary-color;
+        @include center;
+        @include border-radius(50%);
+        img { width: 50%; }
+      }
+    }
+  }
+  .alumni-graphic {
+    img { width: 100%; padding: 100px 0; }
+  }
+}
+
 .card {
   border: none;
   @include box-shadow;
