@@ -78,6 +78,16 @@ section {
   }
 }
 
+.triangle {
+  background: url('../images/backgroundpath.svg');
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .alumni {
   background: $white;
   &__benefits {
@@ -135,6 +145,69 @@ section {
   }
 }
 
+.curriculam {
+  display: flex;
+  justify-content: space-between;
+  &__holder {
+    background: $white;
+    min-width: 200px;
+    width: calc(25% - 20px);
+    flex-direction: column;
+    margin: 10px;
+    padding: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 5px solid $primary-color;
+    @include box-shadow;
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 10px;
+      padding: 0 0 10px;
+      h3 {
+        font-size: 1.2rem;
+        text-align: left;
+        font-weight: 600;
+        margin-left: 15px;
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style-type: none;
+        line-height: 2.5;
+      }
+    }
+  }
+}
+
+.ipd {
+  background: $white;
+  &__graphic {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    img { width: 75%; }
+  }
+  .ipd {
+    &__sessions {
+    display: flex;
+    justify-content: space-between;
+    .points {
+      min-width: 150px;
+      width: calc(15% - 5px);
+      flex-direction: column;
+      margin: 10px;
+      text-align: center;
+      p { margin-top: 15px; }
+    }
+    }
+  }
+}
+
 .card {
   border: none;
   @include box-shadow;
@@ -146,6 +219,7 @@ section {
     }
   }
 }
+
 .back-to-top {
   background: lighten($black, 90%);
   border: none;
@@ -157,17 +231,241 @@ section {
   @include box-shadow;
 }
 
-.triangle {
-  background: url('../images/backgroundpath.svg');
-  justify-content: center;
-  align-items: center;
+.faculty {
+  background: $white;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid $border-color;
   display: flex;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  justify-content: space-between;
+  @include border-radius(5px);
+  .dec {
+    margin-left: 15px;
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+.loadmore {
+  color: $secondary-color;
+  font-size: 1.2rem;
+  text-decoration: underline;
 }
 
+.participant-profile {
+  background: $white;
+  margin: 15px 0;
+  .points {
+    min-height: 86px;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid $border-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include border-radius(5px);
+    .dec { 
+      margin-left: 15px; 
+      p { margin: 0; font-size: 0.9rem; }
+    }
+  }
+}
 
+//Carousel CSS start 
+.carousel_se_01 {
+	.owl-theme {
+		.owl-dots {
+			text-align: center;
+			margin-top: 18px;
+			.owl-dot {
+				display: inline-block;
+				span {
+					width: 12px;
+					height: 12px;
+					margin: 5px 5px;
+					background: #ff5e14;
+					border: 0px solid #ff5e14;
+					display: block;
+					transition: all 0.6s ease-in-out;
+					cursor: pointer;
+					border-radius: 50%;
+				}
+				&:hover {
+					span {
+						color: #fff;
+						background: #ff5e14;
+						padding: 5px;
+						border-radius: 50%;
+					}
+				}
+				&.active {
+					span {
+						color: $white;
+						opacity: 0.5;
+						padding: 5px;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+	}
+	.owl-carousel {
+		.owl-nav {
+			button {
+				&.owl-prev {
+					position: absolute;
+					top: 42%;
+					left: -20px;
+				}
+			}
+		}
+	}
+	.owl-arrow {
+		.owl-nav {
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 1.8rem;
+		}
+	}
+	.main_services {
+		min-height: 466px;
+		background: $white;
+		position: relative;
+		margin: 5px 30px;
+		padding: 15px 30px;
+		border: 1px solid $border-color;
+    @include border-radius(5px);
+    ul {
+      li {
+        line-height: 2.2;
+        list-style-type: none;
+        position: relative;
+        &::before {
+          position: absolute;
+          top: 0;
+          left: -15px;
+          content: "\2022";
+          color: $primary-color; 
+        }
+      }
+    }
+	}
+}
+button.owl-next span, button.owl-prev span {
+	font-size: 4rem;
+}
+.carousel_se_01  .owl-carousel .owl-nav button.owl-next, .carousel_se_01  .owl-carousel .owl-nav button.owl-prev {
+	position: absolute;
+	top: 42%;
+	right: -20px;
+	padding: 0px 15px 6px 15px !important;
+	display: inline-block;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	font-size: 35px;
+	line-height: 35px;
+}
+.carousel_se_01 .owl-arrow .owl-nav .owl-prev,
+.carousel_se_01 .owl-arrow .owl-nav .owl-next {
+	display: inline-block;
+	transition: all 0.6s ease-in-out;
+	color: #000000;
+}
+//Carousel CSS end
+
+//Pie Chart
+.pie-chart {
+  background: $white;
+  padding: 30px;
+  min-height: 450px;
+  #chart { display: flex; justify-content: center; }
+}
+.pie {
+  margin: 20px;
+}
+
+svg {
+    float: left;
+}
+
+.legend {
+  float: left;
+  font-family: "Verdana";
+  font-size: .7em;
+}
+
+.pie text {
+  font-family: "Verdana";
+  fill: #000;
+}
+
+.pie .name-text{
+  font-size: .8em;
+}
+
+.pie .value-text{
+  font-size: 3em;
+}
+
+//Map
+.map {
+  min-height: 500px;
+  background: url(../images/worldmap.svg);
+  // justify-content: center;
+  display: flex;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: -150px;
+  .badge-holder {
+    background: $white;
+    padding: 15px;
+    @include border-radius(15px);
+    @include box-shadow;
+    .badge {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px; 
+      border-bottom: 1px solid $border-color;
+      border-radius: 0;
+      &:last-child { border: none; }
+      .icon {
+        img { width: 80%; margin-right: 15px; }
+      }
+      .dec {
+        text-align: left;
+        strong {
+          color: $primary-color;
+          font-size: 3rem;
+          sub {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modules-fees {
+  background: $white;
+  padding: 30px;
+  .table {
+    thead {
+      background: $primary-color;
+    }
+    tr td {
+      &.total {
+        background: $primary-color;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Medea quries for small device
 @media (max-width: 767.98px) {
   section {
     .videoThumbnail {
@@ -178,5 +476,22 @@ section {
     .highlightsWrapper {
       .highlights { width: 100%; }
     }
+  }
+
+  .ipd {
+    .ipd__sessions {
+      .points {
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        img { width: 30%; }
+        p { text-align: left; margin-left: 15px; }
+      }
+    }
+  }
+
+  .map {
+    min-height: auto;
   }
 }
